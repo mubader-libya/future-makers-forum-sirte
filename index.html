@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F6F9">
+<meta property="og:title" content="ملتقى صنّاع المستقبل">
+<meta property="og:description" content="طرابلس، يناير 2027. منصة وطنية للتكنولوجيا وريادة الأعمال والإعلام والصناعات الإبداعية.">
+<meta property="og:image" content="img/gen/cover.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+<title>ملتقى صنّاع المستقبل</title>
+<meta name="description" content="ملتقى صنّاع المستقبل — طرابلس، يناير 2027. عرض تقديمي.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500&family=Reem+Kufi:wght@500;700&display=swap">
+<link rel="stylesheet" href="deck.css?v=13">
+<script>document.documentElement.lang="ar";document.documentElement.dir="rtl";if(matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("rm");</script>
+
+</head>
+<body>
+<div class="deck" id="deck">
+  <header class="bar">
+    <span class="brand">
+      <svg class="draw" width="26" height="26" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 36V18a14 14 0 0 1 28 0v18"/><path d="M14 36V22a6 6 0 0 1 12 0v14"/></svg>
+      صنّاع المستقبل
+    </span>
+    <span class="chapter" id="chapter" aria-live="polite"></span>
+    <span class="bar-tools">
+      <button class="tool" id="fsBtn" type="button">ملء الشاشة</button>
+      <button class="tool" id="indexBtn" type="button" aria-expanded="false" aria-controls="index">الفهرس</button>
+    </span>
+  </header>
+
+  <main class="stage" id="stage" aria-roledescription="عرض تقديمي"></main>
+
+  <nav class="ctrl" aria-label="التنقل بين الشرائح">
+    <button class="nav-btn" id="prevBtn" type="button" aria-label="الشريحة السابقة">→ السابق</button>
+    <span class="count" id="count"></span>
+    <button class="nav-btn" id="nextBtn" type="button" aria-label="الشريحة التالية">التالي ←</button>
+    <div class="prog"><i id="prog"></i></div>
+  </nav>
+
+  <div class="index" id="index" hidden>
+    <div class="index-in">
+      <p class="index-h">الفهرس</p>
+      <ol id="indexList"></ol>
+    </div>
+  </div>
+</div>
+
+<script src="site-config.js?v=1" defer></script>
+<script src="forum-data.js?v=4" defer></script>
+<script src="scenes.js?v=1" defer></script>
+<script src="deck.js?v=5" defer></script>
+</body>
+</html>
