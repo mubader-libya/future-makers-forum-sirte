@@ -50,7 +50,7 @@ var FAN = '<svg class="draw fan" viewBox="0 0 520 300" role="img" aria-label="ر
 
 function planSVG(R){
   var sizes = { entry:[34,10], foyer:[40,14], arkno:[46,22], qurina:[26,24], mafu:[26,24], kabau:[26,14], ghaba:[26,14], vip:[20,10] };
-  return '<svg class="plan" viewBox="0 0 100 100" role="img" aria-label="مخطط مقترح لتوزيع المناطق على قاعات الفندق"><rect class="outline" x="2" y="2" width="96" height="96" rx="2"/>' +
+  return '<svg class="plan" viewBox="0 0 100 100" role="img" aria-label="مخطط مقترح لتوزيع مناطق الملتقى"><rect class="outline" x="2" y="2" width="96" height="96" rx="2"/>' +
     R.map(function(r){ var s = sizes[r.id] || [20,10];
       return '<g class="room" data-room="' + r.id + '"><rect x="' + (r.x - s[0]/2) + '" y="' + (r.y - s[1]/2) + '" width="' + s[0] + '" height="' + s[1] + '" rx="1"/><text x="' + r.x + '" y="' + (r.y + 1) + '">' + esc(r.short || r.zone) + '</text></g>';
     }).join("") + '</svg>';
@@ -131,8 +131,8 @@ function slides(D){
   /* 12 venue walk */
   var R = D.venue.rooms;
   add("الفصل السادس · جولة في المكان", "grid-bg venue",
-    '<div class="cols w46"><div>' + kick("الفصل السادس · جولة في المكان") + '<h2 class="h">ريكسوس النصر، طرابلس</h2>' +
-    '<p class="sub">مشيٌ افتراضي من بوابة الفندق إلى المسرح. اضغط السهم للانتقال إلى الجناح التالي.</p>' +
+    '<div class="cols w46"><div>' + kick("الفصل السادس · جولة في المكان") + '<h2 class="h">سرت: توزيع مقترح للمساحات</h2>' +
+    '<p class="sub">مشيٌ افتراضي من بوابة الملتقى إلى المسرح. اضغط السهم للانتقال إلى الجناح التالي.</p>' +
     '<div class="room-card" id="roomCard"></div><p class="note">' + esc(D.venue.note) + " " + esc(D.venue.capacity) + '</p></div>' +
     '<div class="vis"><div class="scene-box" id="sceneBox"></div>' + planSVG(R) + '</div></div>',
     { steps: R.length - 1, onStep: function(slide, k){
@@ -189,7 +189,7 @@ function slides(D){
   add("الخاتمة · الخطوة التالية", "grid-bg",
     '<div class="cols"><div>' + kick("الخاتمة · الخطوة التالية") + '<p class="end-line">من الفكرة<br>إلى يناير 2027</p></div>' +
     '<ol class="steps-cta">' +
-    '<li class="b">الموافقة المبدئية على إقامة الملتقى في طرابلس لمدة أربعة أيام.</li>' +
+    '<li class="b">الموافقة المبدئية على إقامة الملتقى في سرت لمدة أربعة أيام.</li>' +
     '<li class="b">اعتماد موعد الانعقاد في يناير 2027.</li>' +
     '<li class="b">تشكيل اللجان التحضيرية والمختصة.</li>' +
     '<li class="b">التفويض ببدء التواصل مع الشركاء المحتملين.</li></ol></div>');
